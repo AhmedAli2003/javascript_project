@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <!-- Start Header Section -->
+    <header>
+        <div class="container">
+            <h1 id="header">Rock, Paper, Scissors</h1>
+        </div>
+    </header>
+    <!-- End Header Section -->
+    <div class="container">
+        <!-- Start Score Board Section -->
+        <section class="score-section">
+            <div class="score-board">
+                <span id="user-score">0</span>:<span id="computer-score">0</span>
+            </div>
+        </section>
+        <!-- End Score Board Section -->
+        <!-- Start Result Section -->
+        <section class="result">
+            <p class="result-p"></p>
+        </section>
+        <!-- End Result Section -->
+        <!-- Start Vresus Section -->
+        <section class="versus">
+            <div class="vs">
+                <img src="assets/rock.png" id="player-side" alt="rock">
+            </div>
+            <div class="vs">
+                <img src="assets/rock.png" id="computer-side" alt="rock">
+            </div>
+        </section>
+        <!-- End Vresus Section -->
+        <!-- Start Choices Section -->
+        <section class="choices"></section>
+        <!-- End Choices Section -->
+        <!-- Start Ending Paragraph -->
+        <p class="end-p">Make your move</p>
+        <!-- End Ending Paragraph -->
+    </div>
+    <!-- Start Settins & Reload Icons -->
+    <div class="settings-icon">
+        <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class="reload">
+        <i class="fa-solid fa-arrow-rotate-right"></i>
+    </div>
+    <!-- End Settins & Reload Icons -->
+    <!-- Start Settings Page -->
+    <section class="settings-section">
+        <div class="container">
+            <h2>Change some options in the game:</h2>
+            <form>
+                <input class="text" type="text" id="array1" placeholder="replace rock">
+                <input class="text" type="text" id="array2" placeholder="replace paper">
+                <input class="text" type="text" id="array3" placeholder="replace scissors">
+                <div class="images-inputs">
+                   <div class="image-field">
+                       <label for="image1">Image 1</label>
+                       <span class="image1-span"></span>
+                       <input type="file" accept="image/png, image/jpg" name="image1" id="image1">
+                   </div>
+                   <div class="image-field">
+                       <label for="image2">Image 2</label>
+                       <span class="image2-span"></span>
+                       <input type="file" accept="image/png, image/jpg" name="image2" id="image2">
+                   </div>
+                   <div class="image-field">
+                       <label for="image3">Image 3</label>
+                       <span class="image3-span"></span>
+                       <input type="file" accept="image/png, image/jpg" name="image3" id="image3">
+                   </div>
+                </div>
+                <div class="color-div">
+                    <label for="primary-color">Change primary color</label>
+                    <input class="color" type="color" id="primary-color" value="#25272E">
+                </div>
+                <div class="color-div">
+                    <label for="secondary-color">Change secondary color</label>
+                    <input class="color" type="color" id="secondary-color" value="#FFFFFF">
+                </div>
+                <div class="close-save">
+                    <button id="close-btn">
+                        <a href="#header">Close</a>
+                    </button>
+                    <button id="save-btn">
+                        <a href="#header">Save</a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- End Settings Page -->
+    <script src="js/main.js"></script>
+</body>
+</html>

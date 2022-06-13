@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+/* Start Global Styles */
+:root {
+    --primary-color: #25272E;
+    --secondary-color: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Styles */
+
+/* Start Header Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+/* End Header Styles */
+
+/* Start Score Board Style */
+.score-section{
+    text-align: center;
+}
+
+.score-board {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 15px 50px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 4px;
+    color: var(--secondary-color);
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+}
+
+.score-board::before {
+    content: "Player";
+    padding: 2px 5px;
+    height: 20px;
+    width: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #E2584D;
+    color: var(--secondary-color);
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -30px;
+}
+
+.score-board::after {
+    content: "Computer";
+    padding: 2px 10px;
+    height: 20px;
+    width: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    background-color: #E2584D;
+    color: var(--secondary-color);
+    position: absolute;
+    top: calc(50% - 10px);
+    right: -30px;
+}
+/* End Score Board Style */
+
+/* Start Result Section Style */
+.result {
+    font-size: 40px;
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: bold;
+}
+/* End Result Section Style */
+
+/* Start Versus Section Style */
+.versus {
+    padding: 0 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+@media (max-width: 992px) {
+    .versus {
+        padding: 0 100px;
+    }
+}
+
+.versus .vs {
+    padding: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+}
+
+.versus .vs img {
+    width: 128px;
+    height: 128px;
+}
+
+.versus .vs:last-child img {
+    transform: rotateY(180deg);
+}
+
+
+/* End Versus Section Style */
+
+/* Start Choices Style */
+.choices {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.choice-btn {
+    min-width: 150px;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    transition: 0.3s ease;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.choice-btn:hover {
+    background-color: #0e0f11;
+}
+/* End Choices Style */
+
+/* Start Ending Paragraph */
+.end-p {
+    margin: 50px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.settings-icon {
+    padding: 20px;
+    color: var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+i {
+    font-size: 1.2em;
+    transition: 0.3 ease;
+}
+
+i:hover {
+    color: #555657;
+}
+
+.reload {
+    padding: 20px;
+    color: var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.absolute {
+    position: absolute;
+    bottom: -10%;
+}
+/* End Ending Paragraph */
+
+/* Start Settings Section */
+.settings-section {
+    background-color: var(--secondary-color);
+    padding: 20px 20px 0;
+    display: none;
+    transition: 0.5s ease;
+}
+
+.settings-section h2 {
+    color: var(--primary-color);
+}
+
+.settings-section form {
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.settings-section form input.text {
+    border: none;
+    appearance: none;
+    background-color: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+}
+
+.settings-section form input.text:focus {
+    border: 2px solid var(--primary-color);
+}
+
+.settings-section form input.text::placeholder {
+    transition: color 0.3s ease;
+}
+
+.settings-section form input.text:focus::placeholder {
+    color: transparent;
+}
+
+.settings-section .color-div label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.label-div {
+    padding-bottom: 20px;
+}
+
+.settings-section .color-div .color {
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+}
+
+.settings-section div .color::-webkit-color-swatch{
+    border-radius: 50%;
+}
+
+.close-save {
+    text-align: end;
+}
+
+.close-save button {
+    width: 100px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.close-save button a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.close-save button:hover {
+    background-color: #0e0f11;
+}
+
+.image-field {
+    padding: 10px 10px 10px 0;
+}
+
+.image-field input {
+    visibility: hidden;
+}
+
+.image-field label {
+    margin-right: 20px;
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.image-field label:hover {
+    color: #0e0f11;
+    font-weight: 600;
+}
+/* End Settings Section */
